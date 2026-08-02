@@ -41,10 +41,7 @@ export default function NavBar() {
         </a>
       </div>
       <div className="grid w-full grid-cols-[1fr_auto_auto_auto_1fr] items-center text-xl">
-        <Link
-          className="flex justify-self-end pr-10 hover:text-accent"
-          to="/"
-        >
+        <Link className="flex justify-self-end pr-10 hover:text-accent" to="/">
           Home
         </Link>
         <span>|</span>
@@ -55,7 +52,10 @@ export default function NavBar() {
           Home
         </Link>
         <span>|</span>
-        <Link className="flex justify-self-start pl-10 hover:text-accent" to="/">
+        <Link
+          className="flex justify-self-start pl-10 hover:text-accent"
+          to="/"
+        >
           Home
         </Link>
       </div>
@@ -76,6 +76,25 @@ export default function NavBar() {
               3rd Year Software Engineering Student
             </DrawerDescription>
           </DrawerHeader>
+          <DrawerFooter>
+            <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center">
+              <a
+                href="https://github.com/Cecilua"
+                className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-accent"
+              >
+                <i className="bi bi-github text-2xl"></i>
+                Github
+              </a>
+              <span>|</span>
+              <a
+                href="https://www.linkedin.com/in/cecilia-kuntze-a208a43ab/"
+                className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-accent"
+              >
+                <i className="bi bi-linkedin text-2xl"></i>
+                LinkedIn
+              </a>
+            </div>
+          </DrawerFooter>
         </DrawerContent>
       </Drawer>
       <Avatar size="lg">
@@ -83,21 +102,6 @@ export default function NavBar() {
         <AvatarFallback>CK</AvatarFallback>
       </Avatar>
       <div className="flex grow">Cecilia Kuntze</div>
-      <a
-        href="https://github.com/Cecilua"
-        className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-accent"
-      >
-        <i className="bi bi-github text-xl"></i>
-        Github
-      </a>
-      <span>|</span>
-      <a
-        href="https://www.linkedin.com/in/cecilia-kuntze-a208a43ab/"
-        className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-accent"
-      >
-        <i className="bi bi-linkedin text-xl"></i>
-        LinkedIn
-      </a>
     </div>
   )
 }
