@@ -6,7 +6,7 @@ import NavBar from "@/components/NavBar.tsx"
 export function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <BrowserRouter basename="/portfolio-website">
         <NavBar/>
         <Routes>
           <Route path="/" element={<Home />} />
