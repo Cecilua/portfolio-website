@@ -49,14 +49,14 @@ export default function NavBar() {
           className="flex justify-self-center px-10 hover:text-accent"
           to="/"
         >
-          Home
+          About Me
         </Link>
         <span>|</span>
         <Link
           className="flex justify-self-start pl-10 hover:text-accent"
           to="/"
         >
-          Home
+          Resume
         </Link>
       </div>
     </div>
