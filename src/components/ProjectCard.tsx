@@ -32,13 +32,15 @@ export default function ProjectCard(project: Project) {
             <CardTitle className="text-xl">
               {project.title} - {project.year}
             </CardTitle>
-            <Badge>{project.academic ? "Academic" : "Personal"}</Badge>
+            <Badge className={project.academic ? "bg-accent" : "bg-primary"}>
+              {project.academic ? "Academic" : "Personal"}
+            </Badge>
           </div>
           <CardDescription>
             {project.url && (
               <a
                 href={getProjectURL(project.url) ?? ""}
-                className="underline hover:text-accent"
+                className="underline text-chart-4 hover:text-accent"
               >
                 Link to Project
               </a>
@@ -48,12 +50,18 @@ export default function ProjectCard(project: Project) {
         <CardContent className="flex grow whitespace-pre-wrap">
           {project.description}
         </CardContent>
-        <CardFooter className="flex w-full">
+        <CardFooter className="flex w-full bg-chart-1/45">
           <div className="flex w-full flex-wrap gap-3">
             {project.tags.map((tag) => (
               <Badge
                 key={`${tag.tag}-${tag.type}`}
-                className={tag.type == "Languages" ? `bg-primary` : `bg-accent`}
+                className={
+                  tag.type == "Languages"
+                    ? `bg-chart-3`
+                    : tag.type == "Frameworks and Libraries"
+                      ? `bg-chart-2`
+                      : `bg-primary`
+                }
               >
                 {tag.tag}
               </Badge>

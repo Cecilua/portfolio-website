@@ -17,7 +17,7 @@ export default function NavBar() {
   const isDesktop = useMediaQuery("(min-width: 48rem)");
 
   return isDesktop ? (
-    <div className="flex flex-col items-center justify-center gap-3 bg-popover/70 p-5">
+    <div className="flex flex-col items-center justify-center gap-3 bg-secondary p-5 text-secondary-foreground">
       <img
         className="rounded-full md:h-35 md:w-35 lg:h-40 lg:w-40 xl:h-50 xl:w-50"
         src="https://avatars.githubusercontent.com/u/65154517"
@@ -27,7 +27,7 @@ export default function NavBar() {
       <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center">
         <a
           href="https://github.com/Cecilua"
-          className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-accent"
+          className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-primary"
         >
           <i className="bi bi-github text-2xl"></i>
           Github
@@ -35,26 +35,26 @@ export default function NavBar() {
         <span>|</span>
         <a
           href="https://www.linkedin.com/in/cecilia-kuntze-a208a43ab/"
-          className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-accent"
+          className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-primary"
         >
           <i className="bi bi-linkedin text-2xl"></i>
           LinkedIn
         </a>
       </div>
       <div className="grid w-full grid-cols-[1fr_auto_auto_auto_1fr] items-center text-xl">
-        <Link className="flex justify-self-end pr-10 hover:text-accent" to="/">
+        <Link className="flex justify-self-end pr-10 hover:text-primary" to="/">
           Home
         </Link>
         <span>|</span>
         <Link
-          className="flex justify-self-center px-10 hover:text-accent"
+          className="flex justify-self-center px-10 hover:text-primary"
           to={`${import.meta.env.BASE_URL}/`}
         >
           About Me
         </Link>
         <span>|</span>
         <Link
-          className="flex justify-self-start pl-10 hover:text-accent"
+          className="flex justify-self-start pl-10 hover:text-primary"
           to="/"
         >
           Resume
@@ -62,7 +62,7 @@ export default function NavBar() {
       </div>
     </div>
   ) : (
-    <div className="flex w-full flex-row items-center gap-3 bg-popover/70 p-5">
+    <div className="flex w-full flex-row items-center gap-3 bg-secondary p-5 text-secondary-foreground">
       <Drawer swipeDirection={"left"}>
         <DrawerTrigger>
           <Menu size={35} />
@@ -81,7 +81,7 @@ export default function NavBar() {
             <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center">
               <a
                 href="https://github.com/Cecilua"
-                className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-accent"
+                className="text-underline flex flex-row items-center gap-3 justify-self-end pr-3 underline hover:text-primary"
               >
                 <i className="bi bi-github text-2xl"></i>
                 Github
@@ -89,7 +89,7 @@ export default function NavBar() {
               <span>|</span>
               <a
                 href="https://www.linkedin.com/in/cecilia-kuntze-a208a43ab/"
-                className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-accent"
+                className="text-underline flex flex-row items-center gap-3 justify-self-start pl-3 underline hover:text-primary"
               >
                 <i className="bi bi-linkedin text-2xl"></i>
                 LinkedIn
