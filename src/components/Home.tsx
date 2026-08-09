@@ -18,13 +18,14 @@ export default function Home() {
     getProjects()
   }, [])
 
-
-
   return (
-    <div className="h-full mt-3 ml:0 sm:ml-3 grid auto-rows-[minmax(0rem,40rem)] grid-cols-[repeat(auto-fit,minmax(min(33rem,100%),1fr))]">
-      {projects.map((project: Project) => (
-        <ProjectCard key={project.id} {...project} />
-      ))}
+    <div className="flex flex-col gap-3 mx-3">
+      <h1 className="text-3xl mt-3 self-center">Projects I've Worked on: </h1>
+      <div className="grid h-full grid-cols-[repeat(auto-fit,minmax(min(33rem,100%),1fr))] gap-3">
+        {projects.map((project: Project) => (
+          <ProjectCard key={project.id} {...project} />
+        ))}
+      </div>
     </div>
   )
 }

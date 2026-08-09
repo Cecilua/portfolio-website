@@ -21,6 +21,7 @@ export default function NavBar() {
       <img
         className="rounded-full md:h-35 md:w-35 lg:h-40 lg:w-40 xl:h-50 xl:w-50"
         src="https://avatars.githubusercontent.com/u/65154517"
+        alt="My Github Avatar"
       ></img>
       <h1>Cecilia Kuntze</h1>
       <div className="grid w-full grid-cols-[1fr_auto_1fr] items-center">
@@ -47,7 +48,7 @@ export default function NavBar() {
         <span>|</span>
         <Link
           className="flex justify-self-center px-10 hover:text-accent"
-          to="/"
+          to={`${import.meta.env.BASE_URL}/`}
         >
           About Me
         </Link>
